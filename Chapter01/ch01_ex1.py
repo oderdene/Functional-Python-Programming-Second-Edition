@@ -89,20 +89,20 @@ def sum_hybrid():
     """
     print(sum(n for n in range(1, 10) if n%3 == 0 or n%5 == 0))
 
-def folding():
-    """Performance differences from folding.
+# def folding():
+#     """Performance differences from folding.
 
-    >>> ((([]+[1])+[2])+[3])+[4]
-    [1, 2, 3, 4]
-    >>> []+([1]+([2]+([3]+[4])))
-    [1, 2, 3, 4]
-    """
-    print("foldl", timeit.timeit("((([]+[1])+[2])+[3])+[4]"))
-    print("foldr", timeit.timeit("[]+([1]+([2]+([3]+[4])))"))
+#     >>> ((([]+[1])+[2])+[3])+[4]
+#     [1, 2, 3, 4]
+#     >>> []+([1]+([2]+([3]+[4])))
+#     [1, 2, 3, 4]
+#     """
+#     print("foldl", timeit.timeit("((([]+[1])+[2])+[3])+[4]"))
+#     print("foldr", timeit.timeit("[]+([1]+([2]+([3]+[4])))"))
 
 demo_1 = """
->>> def sumr(seq): 
-...     if len(seq) == 0: return 0 
+>>> def sumr(seq):
+...     if len(seq) == 0: return 0
 ...     return seq[0] + sumr(seq[1:])
 >>> sumr([7, 11])
 18
@@ -112,9 +112,9 @@ demo_1 = """
 0
 """
 
-__test__ = {
-    'demo_1': demo_1
-}
+# __test__ = {
+#     # 'demo_1': demo_1
+# }
 
 def test():
     import doctest

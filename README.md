@@ -14,11 +14,11 @@ All of the code is organized into folders. Each folder starts with a number foll
 
 The code will look like the following:
 ```
-s = 0 
-for n in range(1, 10): 
-    if n % 3 == 0 or n % 5 == 0: 
-        s += n 
-print(s) 
+s = 0
+for n in range(1, 10):
+    if n % 3 == 0 or n % 5 == 0:
+        s += n
+print(s)
 ```
 
 This book presumes some familiarity with Python 3 and general concepts of application development. We won’t look deeply at subtle or complex features of Python; we’ll avoid much consideration of the internals of the language.
@@ -58,6 +58,39 @@ If you want details, you can run the following:
 $ python3 -m doctest -v Chapter04/*.py
 
 This will produce a lot of detail, but at the end is a count of tests passed.
+
+Миний сурсан зүйлс
+## CHAPTER 1:
+### 1. python -m doctest -v  ch01_test.py
+функ доторх doctest ийг ажиллуулна.
+
+### 2. List ээ рекурс ашиглах
+```
+    def sum(seq):
+       if len(seq) == 0: return 0
+
+       # эхний элементийг арилгаад үлдсэнийг нь дамжуулж байна
+       return seq[0] + sum(seq[1:])
+```
+
+### 3. parametr ээр lambda function дамжуулаад function аа ашиглах
+
+### 4. Нэг мөрөн дэхь for loop
+```
+    print(sum(n for n in range(1, 10) if n%3 == 0 or n%5 == 0))
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Related Products
 * [Functional Python Programming](https://www.packtpub.com/application-development/functional-python-programming?utm_source=github&utm_medium=repository&utm_campaign=9781784396992)

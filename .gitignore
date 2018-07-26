@@ -3,6 +3,8 @@ Thumbs.db
 ehthumbs.db
 
 # Folder config file
+/env/
+__pycache__
 Desktop.ini
 
 # Recycle Bin used on file shares
