@@ -61,10 +61,10 @@ This will produce a lot of detail, but at the end is a count of tests passed.
 
 Миний сурсан зүйлс
 ## CHAPTER 1:
-### 1. python -m doctest -v  ch01_test.py
+#### 1. python -m doctest -v  ch01_test.py
 функ доторх doctest ийг ажиллуулна.
 
-### 2. List ээ рекурс ашиглах
+#### 2. List ээ рекурс ашиглах
 ```
     def sum(seq):
        if len(seq) == 0: return 0
@@ -73,14 +73,50 @@ This will produce a lot of detail, but at the end is a count of tests passed.
        return seq[0] + sum(seq[1:])
 ```
 
-### 3. parametr ээр lambda function дамжуулаад function аа ашиглах
+#### 3. parametr ээр lambda function дамжуулаад function аа ашиглах
 
-### 4. Нэг мөрөн дэхь for loop
+#### 4. Нэг мөрөн дэхь for loop
 ```
     print(sum(n for n in range(1, 10) if n%3 == 0 or n%5 == 0))
 ```
 
 
+
+## CHAPTER 2:
+
+#### class function, Pure function
+```
+def example(a, b, **kw):
+    return a*b
+
+type(example) #   Энэ бол class юм.
+<class 'function'>
+>>> example.__code__.co_varnames
+('a', 'b', 'kw')
+>>> example.__code__.co_argcount
+2
+
+```
+
+Pure function - илэрхий, тест хийхэд ойлгомтой байх хэрэгтэй. `global` statements ээс зайлс хийх хэрэгтэй. We need to look closely at any use of nonlocal; while it is a side effect in another scope, it's confined to a nested function definition. Pure functions are a common feature of Python programs.
+
+Here's a function created by assigning lambda to a variable:
+```
+>>> mersenne = lambda x: 2**x-1
+>>> mersenne(17)
+131071
+```
+
+lambda өөр ямар нэгэн юмнаас хамааралгүй ажиллаж байгаа учир pure function юм.
+
+#### Higher-order functions
+
+
+#### Immutable Data.
+
+#### Loop ийн оронд Recursion ашиглах
+
+#### Functional type systems.
 
 
 
